@@ -1,19 +1,20 @@
+//identify screen size
 const isMobile = window.innerWidth < 600;
 const isTablet = window.innerWidth < 900;
-let count = checkCount();
-let page = 1;
-function checkCount() {
-  return isMobile ? 1 : 3;
-}
-const runningLineContent = document.querySelector(".running-line__content");
-const runningLine = document.querySelector(".running-line");
-const multiplier = Math.floor(
-  runningLine.offsetWidth / runningLineContent.offsetWidth
-);
-for (let i = 0; i < multiplier * 2; i++) {
-  runningLine.appendChild(runningLineContent.cloneNode(true));
+
+//fill running line
+function fillRunningLine() {
+  const runningLineWrapper = document.querySelector(".running-line__wrapper");
+  const runningLine = document.querySelector(".running-line");
+  const multiplier = Math.floor(
+    runningLine.offsetWidth / runningLineWrapper.offsetWidth
+  );
+  for (let i = 0; i < multiplier * 2; i++) {
+    runningLine.appendChild(runningLineWrapper.cloneNode(true));
+  }
 }
 
+//slider
 const slider__content = [
   { text: "HTML", picture: "images/skills/html.png" },
   { text: "CSS", picture: "images/skills/css.png" },
@@ -24,25 +25,23 @@ const slider__content = [
   { text: "Twig", picture: "images/skills/twig.png" },
   { text: "Vue.js", picture: "images/skills/vue.png" },
 ];
+
 const slider__contentContainer = document.querySelector(
   ".slider__content-container"
 );
+
 function createSliderItem(item, before) {
   const slider__figure = document.createElement("div");
   slider__figure.classList.add("figure");
 
   const slider__img_wrapper = document.createElement("div");
-  if (isTablet) {
-    slider__img_wrapper.classList.add("slider__img_wrapper_tablet");
-  } else {
-    slider__img_wrapper.classList.add("slider__img_wrapper");
-  }
+  slider__img_wrapper.classList.add("slider__img_wrapper");
 
   const silder__img_title = document.createElement("div");
-  silder__img_title.classList.add("slider__img_title", "text");
+  silder__img_title.classList.add("slider__img_title", "text", "text_info");
 
   const img = document.createElement("img");
-  img.setAttribute("width", !isMobile ? "100" : "60");
+  img.setAttribute("width", !isTablet ? "100" : "80");
   img.setAttribute("src", `${slider__content[item].picture}`);
   const text = document.createTextNode(`${slider__content[item].text}`);
   silder__img_title.appendChild(text);
@@ -61,24 +60,33 @@ function createSliderItem(item, before) {
     slider__contentContainer.appendChild(slider__figure);
   }
 }
+
 function fillSlider() {
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < sliderItemsCount; i++) {
     createSliderItem(i);
   }
 }
+
+// slider vars, buttons and check if disabled
+let sliderPage = 1;
+
+let sliderItemsCount = countSliderItems();
+function countSliderItems() {
+  return isMobile ? 1 : 3;
+}
+
 const prevPage = document.querySelector(".slider__button_prev");
 const nextPage = document.querySelector(".slider__button_next");
 
 function checkDisabled() {
-  console.log(page, "from check disabled");
-  if (page === 1) {
+  if (sliderPage === 1) {
     prevPage.classList.add("slider__button_disabled");
     prevPage.disabled = true;
   } else {
     prevPage.disabled = false;
     prevPage.classList.remove("slider__button_disabled");
   }
-  if (page == slider__content.length - count + 1) {
+  if (sliderPage == slider__content.length - sliderItemsCount + 1) {
     nextPage.classList.add("slider__button_disabled");
     nextPage.disabled = true;
   } else {
@@ -87,12 +95,14 @@ function checkDisabled() {
   }
 }
 
+//slider "pagination"
 nextPage.onclick = () => {
+  sliderPage++;
+  createSliderItem(sliderItemsCount + sliderPage - 2);
   slider__contentContainer.classList.add("slider__content-container_next-anim");
   const children = slider__contentContainer.querySelectorAll(".figure");
-  page++;
+
   checkDisabled();
-  createSliderItem(count + page - 2);
   slider__contentContainer.onanimationend = () => {
     slider__contentContainer.removeChild(children[0]);
     slider__contentContainer.classList.remove(
@@ -101,12 +111,13 @@ nextPage.onclick = () => {
   };
 };
 prevPage.onclick = () => {
+  sliderPage--;
+  createSliderItem(sliderPage - 1, true);
   slider__contentContainer.classList.add("slider__content-container_prev-anim");
   const children = slider__contentContainer.querySelectorAll(".figure");
   const lastChild = children.length - 1;
-  page--;
+
   checkDisabled();
-  createSliderItem(page - 1, true);
   slider__contentContainer.onanimationend = () => {
     slider__contentContainer.removeChild(children[lastChild]);
     slider__contentContainer.classList.remove(
@@ -114,11 +125,14 @@ prevPage.onclick = () => {
     );
   };
 };
+
+//activate all necessary functions on load
 window.addEventListener(
   "load",
   function () {
     checkDisabled();
-    checkCount();
+    fillRunningLine();
+    countSliderItems();
     fillSlider();
   },
   false

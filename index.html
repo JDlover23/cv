@@ -22,80 +22,80 @@
   <body>
     <div class="main">
       <div class="hero">
-        <div class="logo hero__logo">
+        <div class="logo">
           <img class="logo__img" src="images/logo.svg" alt="Лого" />
-          <span class="text logo__text text_small"
-            >Chunikhina development lab</span
-          >
+          <span class="text logo__text text_small">
+            Chunikhina development lab
+          </span>
         </div>
         <div class="hero__content">
-          <div class="text text_title">
-            <div>Фронтенд-разработка,</div>
-            <div class="text_indent-4">верстка и все такое</div>
-          </div>
-          <div class="text text_small hero__text_small text_indent-2">
-            Я вообще супер-пупер, возьмите меня на работу!
-          </div>
-        </div>
-        <div class="button-group hero__button-group">
-          <button
-            onclick="document.location='#about-me'"
-            class="button button-primary"
-          >
-            <span class="text button-primary__text">Обо мне</span>
-          </button>
-
-          <button
-            onclick="document.location='#my-skills'"
-            class="button button-outlined"
-          >
-            <span class="text">Мои навыки</span>
-          </button>
-        </div>
-      </div>
-      <div class="running-line">
-        <div class="running-line__content">
-          <span class="text running-line__text"> html css js&#160;</span>
-        </div>
-      </div>
-      <div class="info content-block info__content-block">
-        <div id="about-me" class="text text_title">Обо мне</div>
-        <div class="info__content">
-          <div class="info__text">
-            <div class="text text_small info__text_small">
-              <p>Меня зовут Мария, и я начинающий фронтенд-разработчик.</p>
-              <p>
-                Я пришла в it-сферу в 2016 году на должность технического
-                писателя, где разобралась, что такое воркфлоу, как работать с
-                гитом, научилась верстать, оформляя шаблоны веб-документации, а
-                также работать с линуксом.
-              </p>
-              <p>
-                В дальнейшем я работала тестировщицей и менеджером проектов. По
-                факту я не только была менеджером, но также занималась
-                тестированием и аналитикой. Эта работа научила меня еще глубже
-                разбираться во внутренней кухне, я узнала, как выглядят проекты
-                изнутри, познакомилась с vue.js, стала разбираться, что из себя
-                представляет база данных и серверная часть приложения в целом.
-              </p>
-              <p>
-                Моя мечта стать веб-разработчиком никуда не делась, и я решила,
-                что пора заняться тем, чем давно хотела.
-              </p>
+          <div class="hero__text">
+            <div class="text text_info text_main-title">
+              <div>Фронтенд-разработка,</div>
+              <div class="text_indent-4">верстка и все такое</div>
+            </div>
+            <div
+              class="text text_info text_small text_indent-2 hero__text_small"
+            >
+              Я вообще супер-пупер, возьмите меня на работу!
             </div>
           </div>
+          <div class="button-group hero__button-group">
+            <button
+              class="button button_primary"
+              onclick="document.location='#about-me'"
+            >
+              <span class="text">Обо мне</span>
+            </button>
+            <button
+              class="button button_outlined"
+              onclick="document.location='#my-skills'"
+            >
+              <span class="text">Мои навыки</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-          <div class="info__img_container">
-            <div class="info__img_wrapper">
-              <img class="info__img" src="images/avatar.png" alt="Photo" />
+      <div class="running-line">
+        <div class="running-line__wrapper">
+          <span class="text running-line__content"> html css js&#160;</span>
+        </div>
+      </div>
+      <div class="about-me content-block">
+        <div id="about-me" class="text text_title">Обо мне</div>
+        <div class="about-me__content">
+          <div class="text text_info text_small about-me__text">
+            <p>Меня зовут Мария, и я начинающий фронтенд-разработчик.</p>
+            <p>
+              Я пришла в it-сферу в 2016 году на должность технического
+              писателя, где разобралась, что такое воркфлоу, как работать с
+              гитом, научилась верстать, оформляя шаблоны веб-документации, а
+              также работать с линуксом.
+            </p>
+            <p>
+              В дальнейшем я работала тестировщицей и менеджером проектов. По
+              факту я не только была менеджером, но также занималась
+              тестированием и аналитикой. Эта работа научила меня еще глубже
+              разбираться во внутренней кухне, я узнала, как выглядят проекты
+              изнутри, познакомилась с vue.js, стала разбираться, что из себя
+              представляет база данных и серверная часть приложения в целом.
+            </p>
+            <p>
+              Моя мечта стать веб-разработчиком никуда не делась, и я решила,
+              что пора заняться тем, чем давно хотела.
+            </p>
+          </div>
+
+          <div class="about-me__img_container">
+            <div class="about-me__img_wrapper">
+              <img class="about-me__img" src="images/avatar.png" alt="Photo" />
             </div>
           </div>
         </div>
       </div>
       <div class="my-skills content-block">
-        <div id="my-skills" class="text text_title">
-          Мои навыки
-        </div>
+        <div id="my-skills" class="text text_title">Мои навыки</div>
         <div class="slider">
           <div class="slider_left">
             <button class="slider__button_prev">
@@ -110,8 +110,33 @@
           </div>
         </div>
       </div>
+
       <div class="footer">
-        <div class="text text_small">Все права защищены.</div>
+        <div class="footer__content">
+          <div class="my-contacts">
+            <a href="https://gitlab.com/JDlover/todos" target="_blanc">
+              <div class="my-contacts__contact contact_gitlab">
+                <span class="mdi mdi-gitlab" />
+              </div>
+            </a>
+            <a href="https://t.me/jdlover23" target="_blanc">
+              <div class="my-contacts__contact contact_telegram">
+                <span class="mdi mdi-send" />
+              </div>
+            </a>
+            <a href="mailto:jdlover@ya.ru">
+              <div class="my-contacts__contact contact_email">
+                <span class="mdi mdi-mail"></span>
+              </div>
+            </a>
+            <a href="tel:+79817859823">
+              <div class="my-contacts__contact contact_phone">
+                <span class="mdi mdi-phone" />
+              </div>
+            </a>
+          </div>
+          <div class="text footer__text">Все права защищены.</div>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,33 @@
+/* hero/content */
+.hero__content {
+  width: 100%;
+  margin-top: 8rem;
+}
+
+/* hero/button-group */
+.hero__button-group {
+  margin-top: 8rem;
+}
+
+/* about-me/img */
+.about-me__img {
+  width: 20rem;
+  transform: translateY(3%);
+  box-shadow: 2px 5px var(--dark-blue);
+}
+
+/* my-skills/slider/animation */
+@keyframes slide-to-left {
+  from {
+  }
+  to {
+    transform: translateX(-12.5%);
+  }
+}
+@keyframes slide-to-right {
+  from {
+  }
+  to {
+    transform: translateX(12.5%);
+  }
+}

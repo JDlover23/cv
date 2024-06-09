@@ -1,0 +1,99 @@
+/* text */
+.text_title {
+  margin-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* hero/content */
+.hero__content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* hero/button-group */
+.hero__button-group {
+  margin-top: 8rem;
+}
+
+/* content-block */
+.content-block {
+  margin-top: 2rem;
+}
+
+/* about-me/content */
+.about-me__content {
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+/* about-me/text */
+.about-me__text {
+  order: 2;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 2rem;
+  width: 90%;
+}
+
+/* about-me/image */
+.about-me__img_container {
+  order: 1;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-me__img {
+  width: 20rem;
+  transform: translateY(3%);
+  box-shadow: 2px 5px var(--dark-blue);
+}
+
+/* my-skills/slider */
+.slider_left,
+.slider_right {
+  width: 20%;
+}
+.slider__content-container {
+  width: 60%;
+}
+.slider_left,
+.slider_right {
+  justify-content: center;
+}
+
+/* my-skills/slider/animation */
+.figure {
+  width: 12rem;
+}
+@keyframes slide-to-left {
+  from {
+    width: 200%;
+  }
+  to {
+    width: 200%;
+    transform: translateX(-12.5%);
+  }
+}
+@keyframes slide-to-right {
+  from {
+    width: 120%;
+  }
+  to {
+    width: 120%;
+    transform: translateX(12.5%);
+  }
+}
+
+/* footer */
+.footer__text {
+  margin-right: 1rem;
+}
+
+/* footer/my-contacts */
+.my-contacts {
+  margin-left: 1rem;
+}
