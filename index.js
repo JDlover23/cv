@@ -4,7 +4,7 @@ let isMobile = false;
 
 //fill running line
 function fillRunningLine() {
-  
+
   //finding container for words-pack
   const runningLineWrapper = document.querySelector(".running-line__wrapper");
   //finding the line itself
@@ -39,6 +39,7 @@ const slider__content = [
 const slider__contentContainer = document.querySelector(
   ".slider__content-container"
 );
+
 //slider vars
 let sliderPage = 1;
 let sliderItemsCount = 3;
