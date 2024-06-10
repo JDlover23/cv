@@ -1,10 +1,21 @@
+//debounce
+function debounce(callback, delay) {
+  let timer;
+  console.log("debounced");
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      callback();
+    }, delay);
+  };
+}
+
 //identify screen size vars to change them on load and resize
 let isTablet = false;
 let isMobile = false;
 
 //fill running line
 function fillRunningLine() {
-
   //finding container for words-pack
   const runningLineWrapper = document.querySelector(".running-line__wrapper");
   //finding the line itself
@@ -50,7 +61,6 @@ function countSliderItems(isMobile) {
 
 //creating slider item(skill) for slider (to reuse further)
 function createSliderItem(item, prev) {
-  
   //creating figure (main container of skill)
   const slider__figure = document.createElement("div");
   slider__figure.classList.add("figure");
@@ -189,8 +199,8 @@ window.addEventListener(
   function () {
     isTablet = 600 > this.innerWidth < 900;
     isMobile = this.innerWidth < 600;
-    fillRunningLine();
-    fillSlider(isMobile);
+    debounce(fillRunningLine(), 2000);
+    debounce(fillSlider(isMobile), 2000);
   },
   false
 );
