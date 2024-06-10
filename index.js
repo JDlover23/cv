@@ -9,7 +9,6 @@ function fillRunningLine() {
   const runningLineWrapper = document.querySelector(".running-line__wrapper");
   //finding the line itself
   const runningLine = document.querySelector(".running-line");
-
   //identifying how many containers line can include
   const multiplier = Math.floor(
     runningLine.offsetWidth / runningLineWrapper.offsetWidth
