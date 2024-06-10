@@ -3,7 +3,6 @@ let isTablet = false;
 let isMobile = false;
 
 //fill running line
-//fill running line
 function fillRunningLine() {
   //finding container for words-pack
   const runningLineWrapper = document.querySelector(".running-line__wrapper");
@@ -14,9 +13,8 @@ function fillRunningLine() {
     runningLine.offsetWidth / runningLineWrapper.offsetWidth
   );
   //cloning element to fill the line 3 times (to be sure animation will be smooth)
-  const newLineNode = runningLineWrapper.cloneNode(true);Ï
+  const newLineNode = runningLineWrapper.cloneNode(true);
   newLineNode.classList.add("running-line__wrapper");
-  //clearing line
   runningLine.innerHTML = "";
   for (let i = 0; i < multiplier * 3; i++) {
     runningLine.appendChild(newLineNode.cloneNode(true));
@@ -93,7 +91,7 @@ function fillSlider(isMobile) {
   if (slider__contentContainer.hasChildNodes()) {
     slider__contentContainer.innerHTML = "";
   }
-  //count items for slider and checking if it is mobile or not 
+  //count items for slider and checking if it is mobile or not
   countSliderItems(isMobile);
   //create so many items as we need according to display resolution
   for (let i = 0; i < sliderItemsCount; i++) {
