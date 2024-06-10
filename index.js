@@ -51,6 +51,7 @@ function countSliderItems(isMobile) {
 
 //creating slider item(skill) for slider (to reuse further)
 function createSliderItem(item, prev) {
+  
   //creating figure (main container of skill)
   const slider__figure = document.createElement("div");
   slider__figure.classList.add("figure");
