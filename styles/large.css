@@ -1,0 +1,14 @@
+/* common */
+body {
+  background: var(--primary);
+}
+.text_info {
+  color: white;
+}
+.text_title {
+  color: white;
+}
+.running-line {
+  width: 100vw;
+  overflow: visible;
+}

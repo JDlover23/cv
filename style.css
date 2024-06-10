@@ -1,3 +1,4 @@
+/* uploading common style and some styles for different resolutions */
 @import "styles/common.css";
 @import "styles/desktop.css" screen and (min-width: 900px);
 @import "styles/mobile.css" screen and (max-width: 600px);
@@ -5,5 +6,5 @@
   (min-height: 800px);
 @import "styles/tablet.css" screen and (min-width: 600px) and (max-width: 900px)
   and (max-height: 1100px);
-@import "styles/tablet-portrait.css" screen and (min-width: 600px) and
-  (max-width: 900px) and (min-height: 1100px);
+@import "styles/long.css" screen and (min-height: 1000px);
+@import "styles/large.css" screen and (min-width: 1400px);

@@ -13,7 +13,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  margin: 0;
+  margin: auto;
   overflow-x: hidden;
 }
 ul {
@@ -27,6 +27,8 @@ p {
 .main {
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  margin: auto;
 }
 
 /* text */
@@ -34,7 +36,6 @@ p {
   font-family: "Jost", sans-serif;
 }
 .text_info {
-  color: var(--text);
   font-size: 1.2rem;
 }
 .text_main-title,
@@ -121,7 +122,9 @@ p {
 .hero__text_small {
   margin-top: 2rem;
 }
-
+.hero__text_info {
+  color: var(--text);
+}
 /* hero/button-group */
 .hero__button-group {
   margin-top: 4rem;
@@ -135,7 +138,7 @@ p {
   justify-content: center;
   background-color: var(--primary);
   height: 10vh;
-  overflow: scroll;
+  overflow: hidden;
 }
 /* running-line/wrapper */
 .running-line__wrapper {
@@ -193,7 +196,7 @@ p {
 /* my-skills/slider */
 .slider {
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
   align-items: stretch;
   padding: 2rem 0;
@@ -330,6 +333,7 @@ p {
   color: white;
   margin-right: 3rem;
 }
+
 /* footer/my-contacts */
 .my-contacts {
   display: flex;
@@ -353,15 +357,3 @@ p {
   color: var(--primary);
   transition: background 0.3s ease-in-out;
 }
-/* .contact_gitlab {
-  color: #e47e52;
-}
-.contact_telegram {
-  color: #2a93e4;
-}
-.contact_email {
-  color: #de86d2;
-}
-.contact_phone {
-  color: #168f1c;
-} */

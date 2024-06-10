@@ -1,0 +1,14 @@
+/* hero */
+.hero {
+  height: 50vh;
+}
+
+/* hero/content */
+.hero__content {
+  margin-top: 8rem;
+}
+
+/* running-line */
+.running-line {
+  height: 5vh;
+}
