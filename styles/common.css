@@ -143,8 +143,8 @@ p {
 /* running-line/wrapper */
 .running-line__wrapper {
   text-wrap: nowrap;
-  animation: 1s infinite linear forwards run,
-    3s 0.3s infinite linear forwards run;
+  animation: 2s infinite linear forwards run,
+    2s 1s infinite linear forwards run;
 }
 @keyframes run {
   from {
