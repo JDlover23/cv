@@ -344,11 +344,16 @@ p {
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
-  background: white;
   font-size: 2rem;
+  border-radius: 50%;
+  color: white;
 }
-.contact_gitlab {
+.my-contacts__contact:hover {
+  background: white;
+  color: var(--primary);
+  transition: background 0.3s ease-in-out;
+}
+/* .contact_gitlab {
   color: #e47e52;
 }
 .contact_telegram {
@@ -359,4 +364,4 @@ p {
 }
 .contact_phone {
   color: #168f1c;
-}
+} */
