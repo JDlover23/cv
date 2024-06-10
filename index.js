@@ -3,20 +3,23 @@ let isTablet = false;
 let isMobile = false;
 
 //fill running line
+//fill running line
 function fillRunningLine() {
   //finding container for words-pack
   const runningLineWrapper = document.querySelector(".running-line__wrapper");
-
   //finding the line itself
   const runningLine = document.querySelector(".running-line");
-
   //identifying how many containers line can include
   const multiplier = Math.floor(
     runningLine.offsetWidth / runningLineWrapper.offsetWidth
   );
-  //cloning element to fill the line 2 times (to be sure animation will be smooth)
-  for (let i = 0; i < multiplier * 2; i++) {
-    runningLine.appendChild(runningLineWrapper.cloneNode(true));
+  //cloning element to fill the line 3 times (to be sure animation will be smooth)
+  const newLineNode = runningLineWrapper.cloneNode(true);Ï
+  newLineNode.classList.add("running-line__wrapper");
+  //clearing line
+  runningLine.innerHTML = "";
+  for (let i = 0; i < multiplier * 3; i++) {
+    runningLine.appendChild(newLineNode.cloneNode(true));
   }
 }
 
