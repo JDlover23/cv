@@ -6,17 +6,18 @@ let isMobile = false;
 function fillRunningLine() {
   //finding container for words-pack
   const runningLineWrapper = document.querySelector(".running-line__wrapper");
-
   //finding the line itself
   const runningLine = document.querySelector(".running-line");
-
   //identifying how many containers line can include
   const multiplier = Math.floor(
     runningLine.offsetWidth / runningLineWrapper.offsetWidth
   );
-  //cloning element to fill the line 2 times (to be sure animation will be smooth)
-  for (let i = 0; i < multiplier * 2; i++) {
-    runningLine.appendChild(runningLineWrapper.cloneNode(true));
+  //cloning element to fill the line 3 times (to be sure animation will be smooth)
+  const newLineNode = runningLineWrapper.cloneNode(true);
+  newLineNode.classList.add("running-line__wrapper");
+  runningLine.innerHTML = "";
+  for (let i = 0; i < multiplier * 3; i++) {
+    runningLine.appendChild(newLineNode.cloneNode(true));
   }
 }
 
@@ -90,7 +91,7 @@ function fillSlider(isMobile) {
   if (slider__contentContainer.hasChildNodes()) {
     slider__contentContainer.innerHTML = "";
   }
-  //count items for slider and checking if it is mobile or not 
+  //count items for slider and checking if it is mobile or not
   countSliderItems(isMobile);
   //create so many items as we need according to display resolution
   for (let i = 0; i < sliderItemsCount; i++) {
