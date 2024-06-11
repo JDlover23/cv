@@ -1,5 +1,5 @@
 /* text */
-.text_title {
+.content-block__title {
   margin-left: 2rem;
   padding-bottom: 1rem;
 }
@@ -22,7 +22,7 @@
 }
 
 /* about-me/content */
-.about-me__content {
+.content-block__content {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
@@ -30,7 +30,7 @@
 }
 
 /* about-me/text */
-.about-me__text {
+.content-block__text {
   order: 2;
   margin-left: 0;
   margin-right: 0;
@@ -39,14 +39,14 @@
 }
 
 /* about-me/image */
-.about-me__img_container {
+.content-block__img_container {
   order: 1;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about-me__img {
+.content-block__img {
   width: 20rem;
   transform: translateY(3%);
   box-shadow: 2px 5px var(--dark-blue);
@@ -94,6 +94,6 @@
 }
 
 /* footer/my-contacts */
-.my-contacts {
+.icon-group {
   margin-left: 1rem;
 }

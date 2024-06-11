@@ -30,29 +30,25 @@
         </div>
         <div class="hero__content">
           <div class="hero__text">
-            <div class="text hero__text_info text_main-title">
+            <div class="text hero__text_info hero__title">
               <div>Фронтенд-разработка,</div>
               <div class="text_indent-4">верстка и все такое</div>
             </div>
-            <div
-              class="text hero__text_info text_small text_indent-2 hero__text_small"
-            >
+            <div class="text hero__text_info text_indent-2 hero__text_small">
               Я вообще супер-пупер, возьмите меня на работу!
             </div>
           </div>
           <div class="button-group hero__button-group">
-            <button
-              class="button button_primary"
-              onclick="document.location='#about-me'"
-            >
-              <span class="text">Обо мне</span>
-            </button>
-            <button
-              class="button button_outlined"
-              onclick="document.location='#my-skills'"
-            >
-              <span class="text">Мои навыки</span>
-            </button>
+            <a href="#about-me">
+              <button class="button button_primary">
+                <span class="text">Обо мне</span>
+              </button>
+            </a>
+            <a href="#my-skills">
+              <button class="button button_outlined">
+                <span class="text">Мои навыки</span>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -62,10 +58,10 @@
           <span class="text running-line__content"> html css js&#160;</span>
         </div>
       </div>
-      <div class="about-me content-block">
-        <div id="about-me" class="text text_title">Обо мне</div>
-        <div class="about-me__content">
-          <div class="text text_info text_small about-me__text">
+      <div class="content-block">
+        <div id="about-me" class="text content-block__title">Обо мне</div>
+        <div class="content-block__content">
+          <div class="text text_info text_small content-block__text">
             <p>Меня зовут Мария, и я начинающий фронтенд-разработчик.</p>
             <p>
               Я пришла в it-сферу в 2016 году на должность технического
@@ -87,15 +83,19 @@
             </p>
           </div>
 
-          <div class="about-me__img_container">
-            <div class="about-me__img_wrapper">
-              <img class="about-me__img" src="images/avatar.jpg" alt="Photo" />
+          <div class="content-block__img_container">
+            <div class="content-block__img_wrapper">
+              <img
+                class="content-block__img"
+                src="images/avatar.jpg"
+                alt="Photo"
+              />
             </div>
           </div>
         </div>
       </div>
-      <div class="my-skills content-block">
-        <div id="my-skills" class="text text_title">Мои навыки</div>
+      <div class="content-block">
+        <div id="my-skills" class="text content-block__title">Мои навыки</div>
         <div class="slider">
           <div class="slider_left">
             <button class="slider__button_prev">
@@ -113,24 +113,24 @@
 
       <div class="footer">
         <div class="footer__content">
-          <div class="my-contacts">
+          <div class="icon-group">
             <a href="https://gitlab.com/JDlover/todos" target="_blanc">
-              <div class="my-contacts__contact contact_gitlab">
+              <div class="icon-group__icon">
                 <span class="mdi mdi-gitlab" />
               </div>
             </a>
             <a href="https://t.me/jdlover23" target="_blanc">
-              <div class="my-contacts__contact contact_telegram">
+              <div class="icon-group__icon">
                 <span class="mdi mdi-send" />
               </div>
             </a>
             <a href="mailto:jdlover@ya.ru">
-              <div class="my-contacts__contact contact_email">
+              <div class="icon-group__icon">
                 <span class="mdi mdi-mail"></span>
               </div>
             </a>
             <a href="tel:+79817859823">
-              <div class="my-contacts__contact contact_phone">
+              <div class="icon-group__icon">
                 <span class="mdi mdi-phone" />
               </div>
             </a>

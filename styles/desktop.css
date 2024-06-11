@@ -1,5 +1,5 @@
 /* about-me/img */
-.about-me__img_wrapper {
+.content-block__img_wrapper {
   width: 70%;
   background: linear-gradient(
       320deg,
@@ -11,7 +11,7 @@
   box-shadow: 3px 3px var(--dark-blue);
   transform: rotate(45deg);
 }
-.about-me__img {
+.content-block__img {
   transform: scale(0.8) rotate(-25deg) translateY(3%);
   box-shadow: 2px 5px var(--dark-blue), 30px -10px 40px var(--dark-orange);
 }

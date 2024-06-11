@@ -7,4 +7,3 @@
 @import "styles/tablet.css" screen and (min-width: 600px) and (max-width: 900px)
   and (max-height: 1100px);
 @import "styles/long.css" screen and (min-height: 1000px);
-@import "styles/large.css" screen and (min-width: 1400px);

@@ -70,7 +70,7 @@ function createSliderItem(item, prev) {
 
   //creating img figcaption
   const silder__img_title = document.createElement("div");
-  silder__img_title.classList.add("slider__img_title", "text", "text_info");
+  silder__img_title.classList.add("slider__img_title", "text");
 
   //creating img (if tablet - making it a little bit smaller)
   const img = document.createElement("img");

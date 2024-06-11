@@ -10,7 +10,7 @@
 }
 
 /* about-me/img */
-.about-me__img {
+.content-block__img {
   width: 20rem;
   transform: translateY(3%);
   box-shadow: 2px 5px var(--dark-blue);
